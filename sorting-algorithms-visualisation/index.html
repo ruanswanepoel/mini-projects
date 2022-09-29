@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en" translate="no">
+	<head>
+
+		<title>Sorting Algorithm Visualisation</title>
+
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<!-- Scripts to load in head -->
+		<script src="Scripts/Algorithms/Algorithm.js"></script>
+		<script src="Scripts/Algorithms/SelectionSort.js"></script>
+		<script src="Scripts/Algorithms/BubbleSort.js"></script>
+		<script src="Scripts/Algorithms/InsertionSort.js"></script>
+		<script src="Scripts/Algorithms/MergeSort.js"></script>
+		<script src="Scripts/Algorithms/QuickSort.js"></script>
+		<script src="Scripts/Algorithms/HeapSort.js"></script>
+		<script src="Scripts/Algorithms/CountingSort.js"></script>
+		<script src="Scripts/Algorithms/RadixSort.js"></script>
+		<script src="Scripts/Algorithms/BucketSort.js"></script>
+		
+	</head>
+
+	<body>
+		
+		<a href="v2/index.html" style="float: right;">Updated Version (In Progress)  </a>
+
+		<!-- Page header -->
+		<header>
+			<h1>Select an algorithm</h1>
+			<div>
+				<ul class="algs">
+					<li class="alg" id="0"><a>Selection Sort</a></li>
+					<li class="alg" id="1"><a>Bubble Sort</a></li>
+					<li class="alg" id="2"><a>Insertion Sort</a></li>
+					<li class="alg" id="3"><a>Merge Sort</a></li>
+					<li class="alg" id="4"><a>Quick Sort</a></li>
+					<li class="alg" id="5"><a>Heap Sort</a></li>
+					<li class="alg" id="6"><a>Counting Sort</a></li>
+					<li class="alg" id="7"><a>Radix Sort</a></li>
+					<li class="alg" id="8"><a>Bucket Sort</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul class="ctrl">
+					<li class="sort"><a>Sort</a></li>
+					<li class="reset"><a>Reset</a></li>
+					<li style="margin-left: 40px;"></li>
+					<li class="sub"><a>-</a></li>
+					<li><p class="numValues">10</p></li>
+					<li class="add"><a>+</a></li>
+					<li style="margin-left: 100px;"></li>
+					<li><p>Comparisions:</p></li>
+					<li><p class="numComparisons">0</p></li>
+					<li style="margin-left: 20px;"></li>
+					<li><p>Swaps:</p></li>
+					<li><p class="numSwaps">0</p></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- Visual line break -->
+		<div class="line"></div>
+
+		<!-- Canvas -->
+		<div class="content">
+			<ul class="bars">
+
+			</ul>
+		</div>
+		
+		<!-- Scripts related to html elements -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+		<script src="Scripts/Content.js"></script>
+		<script src="Scripts/Buttons.js"></script>
+		
+	</body>
+</html>

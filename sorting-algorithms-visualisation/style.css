@@ -1,0 +1,110 @@
+
+* {
+	top: 0;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	border: 0;
+	outline: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #8bc2d8;
+}
+
+header {
+	background-color: white;
+	padding: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.algs {
+	text-align: center;
+}
+
+.algs li {
+	display: inline-block;
+	background-color: #333333;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+
+.algs li a {
+	display: block;
+	color: white;
+	padding: 14px;
+	padding-left: 30px;
+	padding-right: 30px
+}
+
+.algs li a:hover {
+	background-color: #111111;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.ctrl {
+	text-align: center;
+	margin: 20px;
+}
+
+.ctrl li {
+	display: inline-block;
+}
+
+.ctrl li a {
+	font-weight: bold;
+	background-color: #999999;
+	padding: 14px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.ctrl li a:hover {
+	background-color: #636363;
+	cursor: pointer;
+}
+
+.ctrl li p {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.line {
+	height: 3px;
+	background-color: #000000;
+}
+
+.content {
+	width: 100%;
+	height: 70%;
+	background-color: #8bc2d8;
+}
+
+.bars {
+	list-style-type: none;
+	text-align: center;
+}
+
+.bars li {
+	width: 20px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 40px;
+}
+
+.bars li div {
+	background-color: #b768d6;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.bars li p {
+	font-size: 12px;
+}

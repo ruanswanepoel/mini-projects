@@ -1,0 +1,87 @@
+<!-- 
+NOTE:
+Dropdown list website - https://www.tutorialrepublic.com/codelab.php?topic=faq&file=show-hide-dropdown-on-mouse-hover
+Sample Sorting alg visualiser - https://clementmihailescu.github.io/Sorting-Visualizer/
+-->
+
+<!doctype html>
+
+<html lang="en" translate="no">
+
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="Styles/style.css" />
+
+		<!-- Algorithms -->
+		<script src="Scripts/Algorithms/Selection.js"></script>
+		<script src="Scripts/Algorithms/Bubble.js"></script>
+		<script src="Scripts/Algorithms/Insertion.js"></script>
+
+		<!-- Objects -->
+		<script src="Scripts/ListRenderer.js"></script>
+		<script src="Scripts/CachedList.js"></script>
+
+		<!-- Scripts -->
+		<script src="Scripts/setup.js"></script>
+		<script src="Scripts/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<!-- Header that contains all the sorting options -->
+		<div class="header" id="header">
+			<!-- Algorithm selection -->
+			<div class="header-item">
+				<p>Algorithm</p>
+				<select class="algorithm-selector" id="selectAlgorithm">
+					<option value="0">Selection</option>
+					<option value="1">Bubble</option>
+					<option value="2">Insertion</option>
+				</select>
+			</div>
+			<!-- Horizontal seperator -->
+			<div class="seperator"></div>
+			<!-- Number of elements to sort -->
+			<div class="header-item">
+				<p>Elements - <span id="lblElements">50</span></p>
+				<div class="slider" style="display: inline-flex;">
+					<p class="button" id="btnDecElements">-</p>
+					<input type="range" id="sliderElements" min="3" value="50">
+					<p class="button" id="btnIncElements">+</p>
+				</div>
+			</div>
+			<!-- Horizontal seperator -->
+			<div class="seperator"></div>
+			<!-- Speed of the sorting process -->
+			<div class="header-item">
+				<p>Speed - <span id="lblSpeed">1</span></p>
+				<div class="slider" style="display: inline-flex;">
+					<p class="button" id="btnDecSpeed">-</p>
+					<input type="range" id="sliderSpeed" min="1" max="20" value="10">
+					<p class="button" id="btnIncSpeed">+</p>
+				</div>
+			</div>
+			<!-- Horizontal seperator -->
+			<div class="seperator"></div>
+			<!-- Start/stop button -->
+			<div class="header-item">
+				<p class="button" id="btnSort">Sort</p>
+			</div>
+			<!-- Reset button -->
+			<div class="header-item">
+				<p class="button" id="btnReset">Reset</p>
+			</div>
+		</div>
+
+		<!-- Horizontal line -->
+		<div class="divider"></div>
+
+		<!-- Sorting content -->
+		<div class="content">
+			<canvas class="content-canvas" id="ctx"></canvas>
+		</div>
+
+	</body>
+
+</html>

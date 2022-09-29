@@ -1,0 +1,11 @@
+
+
+class QuickSort {
+
+	constructor() {
+
+	}
+
+	
+
+}

@@ -1,0 +1,11 @@
+
+
+class InsertionSort {
+
+	constructor() {
+
+	}
+
+	
+
+}
