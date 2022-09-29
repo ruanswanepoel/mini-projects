@@ -7,81 +7,53 @@ Sample Sorting alg visualiser - https://clementmihailescu.github.io/Sorting-Visu
 <!doctype html>
 
 <html lang="en" translate="no">
-
-	<head>
-
-		<link rel="stylesheet" type="text/css" href="Styles/style.css" />
-
-		<!-- Algorithms -->
-		<script src="Scripts/Algorithms/Selection.js"></script>
-		<script src="Scripts/Algorithms/Bubble.js"></script>
-		<script src="Scripts/Algorithms/Insertion.js"></script>
-
-		<!-- Objects -->
-		<script src="Scripts/ListRenderer.js"></script>
-		<script src="Scripts/CachedList.js"></script>
-
-		<!-- Scripts -->
-		<script src="Scripts/setup.js"></script>
-		<script src="Scripts/script.js"></script>
-		
-	</head>
-
-	<body>
-
-		<!-- Header that contains all the sorting options -->
-		<div class="header" id="header">
-			<!-- Algorithm selection -->
-			<div class="header-item">
-				<p>Algorithm</p>
-				<select class="algorithm-selector" id="selectAlgorithm">
-					<option value="0">Selection</option>
-					<option value="1">Bubble</option>
-					<option value="2">Insertion</option>
-				</select>
-			</div>
-			<!-- Horizontal seperator -->
-			<div class="seperator"></div>
-			<!-- Number of elements to sort -->
-			<div class="header-item">
-				<p>Elements - <span id="lblElements">50</span></p>
-				<div class="slider" style="display: inline-flex;">
-					<p class="button" id="btnDecElements">-</p>
-					<input type="range" id="sliderElements" min="3" value="50">
-					<p class="button" id="btnIncElements">+</p>
-				</div>
-			</div>
-			<!-- Horizontal seperator -->
-			<div class="seperator"></div>
-			<!-- Speed of the sorting process -->
-			<div class="header-item">
-				<p>Speed - <span id="lblSpeed">1</span></p>
-				<div class="slider" style="display: inline-flex;">
-					<p class="button" id="btnDecSpeed">-</p>
-					<input type="range" id="sliderSpeed" min="1" max="20" value="10">
-					<p class="button" id="btnIncSpeed">+</p>
-				</div>
-			</div>
-			<!-- Horizontal seperator -->
-			<div class="seperator"></div>
-			<!-- Start/stop button -->
-			<div class="header-item">
-				<p class="button" id="btnSort">Sort</p>
-			</div>
-			<!-- Reset button -->
-			<div class="header-item">
-				<p class="button" id="btnReset">Reset</p>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script src="scripts/Event.js"></script>
+	<script src="scripts/Algorithms/Selection.js"></script>
+	<script src="scripts/CachedList.js"></script>
+	<script src="scripts/ListRenderer.js"></script>
+	<script src="scripts/script.js"></script>
+</head>
+<body>
+	<div class="header" id="header">
+		<div class="header-item">
+			<p>Algorithm</p>
+			<select id="algorithm-selector" onchange="algorithm=this.value;">
+				<option value="0">Selection</option>
+				<option value="1">Bubble</option>
+				<option value="2">Insertion</option>
+			</select>
+		</div>
+		<div class="seperator"></div>
+		<div class="header-item">
+			<p>Elements - <span id="elements-label">50</span></p>
+			<div class="slider">
+				<button id="sub-element-button" onclick="$('elements-slider').stepDown();$('elements-slider').onchange();">-</button>
+				<input type="range" id="elements-slider" min="3" value="50">
+				<button id="add-element-button" onclick="$('elements-slider').stepUp();$('elements-slider').onchange();">+</button>
 			</div>
 		</div>
-
-		<!-- Horizontal line -->
-		<div class="divider"></div>
-
-		<!-- Sorting content -->
-		<div class="content">
-			<canvas class="content-canvas" id="ctx"></canvas>
+		<div class="seperator"></div>
+		<div class="header-item">
+			<p>Speed - <span id="speed-label">5</span></p>
+			<div class="slider">
+				<button id="sub-speed-button" onclick="$('speed-slider').stepDown();$('speed-slider').onchange();">-</button>
+				<input type="range" id="speed-slider" min="1" max="10" value="5">
+				<button id="add-speed-button" onclick="$('speed-slider').stepUp();$('speed-slider').onchange();">+</button>
+			</div>
 		</div>
-
-	</body>
-
+		<div class="seperator"></div>
+		<div class="header-item">
+			<button id="sort-button" onclick="sort();">Sort</button>
+		</div>
+		<div class="header-item">
+			<button id="reset-button" onclick="reset();">Reset</button>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="content">
+		<canvas class="content-canvas" id="canvas"></canvas>
+	</div>
+</body>
 </html>
